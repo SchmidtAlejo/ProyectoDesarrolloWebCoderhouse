@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+:root {
+    --color-dorado: #9E976E;
+}
+
+body {
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+body::-webkit-scrollbar{
+    width: 8px;
+    background-color: #000;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: var(--color-dorado);
+    border-radius: 4px;
+}
+
+header {
+    background-color: #000 !important;
+}
+
+.header-logo img {
+    height: 40px;
+}
+
+.header-logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.list-item {
+    flex-grow: 0;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header li {
+    list-style: none;
+}
+
+header li a {
+    font-family: 'Cinzel', serif;
+    text-decoration: none;
+    color: var(--color-dorado);
+    font-size: 1.2em;
+    margin: 0px 8px;
+}
+
+footer {
+    height: 80px;
+    background-color: #000;
+    text-align: center;
+}
+
+footer p {
+    padding-top: 30px;
+    color: #aaa;
+}
+
+main {
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 136px);
+}
+
+.background-opacity-black {
+    background-color: #00000090;
+}
+
+.title {
+    color: var(--color-dorado);
+    font-family: 'Cinzel', serif;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    font-size: 2.5rem;
+}
+
+header i {
+    color: var(--color-dorado);
+}
+
+@media screen and (max-width: 992px) {
+    .header-logo {
+        position: absolute;
+        margin-left: 60px;
+        top: 0;
+        height: 30px;
+    }
+
+    header nav {
+        position: relative;
+    }
+
+    main {
+        min-height: calc(100vh - 126px);
+    }
+}
+
+/* Home */
+
+.home {
+    width: 100%;
+}
+
+.home section {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home section .container {
+    min-height: calc(100vh - 56px);
+    gap: 32px;
+}
+
+.home section:first-child {
+    background-image: url('../img/index/background-1.jpg');
+    background-size: contain;
+    background-color: #000;
+}
+
+.home section:nth-child(2) {
+    background-image: url('../img//index/background-2.jpg');
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.home section:last-child {
+    background-image: url('../img/index/background-3.jpg');
+    background-size: cover;
+}
+
+
+.home__information {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex: 1;
+}
+
+.home div h2 {
+    margin-bottom: 8px;
+    color: var(--color-dorado);
+    font-family: 'Cinzel', serif;
+}
+
+.home__separador {
+    height: fit-content;
+}
+
+.home__separador img {
+    width: 100%;
+    padding: 16px 0;
+}
+
+.home__text--container {
+    padding: 16px;
+    border-radius: 8px;
+    height: fit-content;
+    flex: 2;
+    min-width: 350px;
+}
+
+
+/* Personajes */
+
+.personajes {
+    background-image: url('../img/personajes/background.jpg');
+    background-attachment: fixed;
+}
+
+.personaje__item {
+    padding: 16px;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.personaje__item img {
+    width: 100%;
+    object-fit: cover;
+    height: 128px;
+    border-radius: 8px;
+}
+
+.personaje__item h2 {
+    text-align: center;
+}
+
+.personaje__item p {
+    margin-top: 4px;
+}
+
+
+/* Multimedia */
+
+.multimedia {
+    background-image: url('../img/multimedia/background.jpg');
+    background-position: center;
+}
+
+.multimedia__videos-container iframe {
+    width: 100%;
+    height: 700px;
+}
+
+.multimedia button {
+    height: fit-content;
+    width: fit-content;
+    padding: 32px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.multimedia__videos-container,
+.multimedia__soundtrack-container {
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1.2em;
+}
+
+.multimedia h2 {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.multimedia__videos-container {
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+
+.multimedia__soundtrack-container {
+    width: 100%;
+}
+
+@media screen and (max-width:1200px) {
+    .multimedia__videos-container iframe {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .multimedia__videos-container iframe {
+        height: 360px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .multimedia__videos-container iframe {
+        height: 300px;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    .multimedia__videos-container iframe {
+        height: 240px;
+    }
+}
+
+/* Clases */
+
+.clases {
+    background-image: url('../img/clases/background.jpg');
+    background-position: center;
+    text-align: center;
+}
+
+.clase__item {
+    max-width: 720px;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 0 32px;
+}
+
+.clase__item img {
+    object-fit: cover;
+    margin: auto;
+}
+
+.clase__item p {
+    text-align: left;
+}
+
+@media screen and (min-width: 578px) {
+    .clase__item img {
+        width: 360px;
+        height: 530px;
+    }
+
+    .clase__item p {
+        min-height: 120px;
+    }
+}
+
+@media screen and (max-width: 578px) {
+    .clase__item img {
+        width: 240px;
+        height: 350px;
+    }
+
+    .clase__item p {
+        min-height: 180px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .clase__item img {
+        width: 200px;
+        height: 350px;
+    }
+
+    .clase__item p {
+        min-height: 220px;
+    }
+}
+
+/* Contacto */
+
+.contacto {
+    background-image: url('../img/contacto/background.jpg');
+}
+
+.contacto form {
+    padding: 16px;
+    border-radius: 16px;
+    max-width: 720px;
+    margin: auto;
+}
+
+.contacto h2 {
+    text-align: center;
+    color: var(--color-dorado);
+    margin-bottom: 24px;
+    font-size: 2rem;
+    font-family: 'Cinzel', serif;
+}
+
+.contacto input {
+    width: 100%;
+    height: 48px;
+    font-size: 1.2rem;
+    padding-left: 8px;
+    margin: 8px 0;
+}
+
+
+.contacto input[type="submit"],
+.contacto input[type="reset"] {
+    background-color: var(--color-dorado);
+    cursor: pointer;
+}
