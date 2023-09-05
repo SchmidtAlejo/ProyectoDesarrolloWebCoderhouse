@@ -65,11 +65,15 @@ footer {
     height: 80px;
     background-color: #000;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 footer p {
-    padding-top: 30px;
     color: #aaa;
+    margin: 0;
 }
 
 main {
