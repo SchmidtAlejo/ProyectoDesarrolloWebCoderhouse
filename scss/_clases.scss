@@ -1,0 +1,42 @@
+.clases {
+  background-image: url("../img/clases/background.jpg");
+  background-position: center;
+  text-align: center;
+
+  .clase__item {
+    max-width: 720px;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 0 32px;
+
+    img {
+      object-fit: cover;
+      margin: auto;
+      @media screen and (min-width: 578px) {
+        width: 360px;
+        height: 530px;
+      }
+      @media screen and (max-width: 578px) {
+        width: 240px;
+        height: 350px;
+      }
+      @media screen and (max-width: 400px) {
+        width: 200px;
+        height: 350px;
+      }
+    }
+
+    p {
+      text-align: left;
+      @media screen and (min-width: 578px) {
+        min-height: 120px;
+      }
+      @media screen and (max-width: 578px) {
+        min-height: 180px;
+      }
+      @media screen and (max-width: 400px) {
+        min-height: 220px;
+      }
+    }
+  }
+}
