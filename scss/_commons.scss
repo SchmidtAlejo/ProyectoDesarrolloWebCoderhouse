@@ -1,14 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: $mainFont;
   box-sizing: border-box;
   color: $white1;
 }
 
 body {
   min-height: 100vh;
-  flex-direction: column;
 
   &::-webkit-scrollbar {
     width: 8px;
@@ -25,13 +23,10 @@ footer {
   height: 80px;
   background-color: $mainColor;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexbox(column, center, center, nowrap);
 
   p {
-    color: $gray1;
+    @include textos($textMd, $mainFont, $gray1, $fontRegular);
     margin: 0;
   }
 }
@@ -48,14 +43,12 @@ main {
 
 .background-opacity-black {
   background-color: $mainColorOpacity;
+  padding: 16px;
 }
 
 .title {
-  color: $secondaryColor;
-  font-family: $secondaryFont;
+  @include textos($textXxl, $secondaryFont, $secondaryColor, $fontBold);
   width: fit-content;
   padding: 8px;
   border-radius: 8px;
-  margin-bottom: 32px;
-  font-size: $textXxl;
 }

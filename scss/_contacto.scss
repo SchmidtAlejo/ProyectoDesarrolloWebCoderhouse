@@ -2,24 +2,19 @@
     background-image: url('../img/contacto/background.jpg');
 
     form {
-        padding: 16px;
         border-radius: 16px;
         max-width: 720px;
         margin: auto;
     }
 
-    h2 {
-        text-align: center;
-        color: $secondaryColor;
-        margin-bottom: 24px;
-        font-size: 2rem;
-        font-family: $secondaryFont;
+    h1 {
+        margin: auto;
     }
 
     input {
         width: 100%;
         height: 48px;
-        font-size: 1.2rem;
+        @include textos($textLg, $mainFont, $gray1, $fontRegular);
         padding-left: 8px;
         margin: 8px 0;
 
@@ -28,6 +23,12 @@
             background-color: $secondaryColor;
             border: none;
             cursor: pointer;
+            color: $white1;
+            transition: .3s ease-in-out background-color;
+
+            &:hover{
+                background-color: $secondaryColorActive;
+            }
         }
     }
 }

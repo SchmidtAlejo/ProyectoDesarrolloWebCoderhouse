@@ -2,24 +2,35 @@
   background-image: url("../img/multimedia/background.jpg");
   background-position: center;
 
-  &__videos-container iframe {
+  &__soundtrack-container {
+    border-radius: 8px;
     width: 100%;
-    height: 700px;
+  }
 
-    @media screen and (max-width: 1200px) {
-      height: 500px;
-    }
+  &__videos-container {
+    @extend .multimedia__soundtrack-container;
+    margin: 0 auto;
+    margin-bottom: 24px;
 
-    @media screen and (max-width: 992px) {
-      height: 360px;
-    }
-
-    @media screen and (max-width: 500px) {
-      height: 300px;
-    }
-
-    @media screen and (max-width: 400px) {
-      height: 240px;
+    iframe {
+      width: 100%;
+      height: 700px;
+  
+      @media screen and (max-width: 1200px) {
+        height: 500px;
+      }
+  
+      @media screen and (max-width: 992px) {
+        height: 360px;
+      }
+  
+      @media screen and (max-width: 500px) {
+        height: 300px;
+      }
+  
+      @media screen and (max-width: 400px) {
+        height: 240px;
+      }
     }
   }
 
@@ -32,24 +43,10 @@
     transform: translateY(-50%);
   }
 
-  &__videos-container,
-  &__soundtrack-container {
-    padding: 16px;
-    border-radius: 8px;
-    font-size: 1.2em;
-  }
-
   h2 {
     margin-bottom: 8px;
     text-align: center;
+    @include textos($textXl, $mainFont, $white1, $fontRegular);
   }
 
-  &__videos-container {
-    margin: 0 auto;
-    margin-bottom: 24px;
-  }
-
-  &__soundtrack-container {
-    width: 100%;
-  }
 }

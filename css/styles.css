@@ -1,14 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   color: #fafafa;
 }
 
 body {
   min-height: 100vh;
-  flex-direction: column;
 }
 body::-webkit-scrollbar {
   width: 8px;
@@ -25,11 +23,16 @@ footer {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 footer p {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
   color: #a9a9a9;
+  font-weight: 400;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -45,24 +48,25 @@ main {
 }
 
 .background-opacity-black {
-  background-color: rgba(0, 0, 0, 0.5019607843);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 16px;
 }
 
 .title {
-  color: #9E976E;
+  font-size: 2.5rem;
   font-family: "Cinzel", serif;
+  color: #9E976E;
+  font-weight: bold;
+  line-height: 1.5;
   width: fit-content;
   padding: 8px;
   border-radius: 8px;
-  margin-bottom: 32px;
-  font-size: 2.5rem;
 }
 
 header {
   background-color: #000 !important;
 }
 header ul {
-  display: flex;
   align-items: center;
   height: 100%;
 }
@@ -70,11 +74,20 @@ header li {
   list-style: none;
 }
 header a {
-  font-family: "Cinzel", serif;
-  text-decoration: none;
-  color: #9E976E;
   font-size: 1.2rem;
+  font-family: "Cinzel", serif;
+  color: #9E976E;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
   margin: 0px 8px;
+  transition: 0.2s ease-in-out color;
+}
+header a:hover {
+  color: #ccbf72;
+}
+header .active {
+  color: #ccbf72;
 }
 header i {
   color: #9E976E;
@@ -86,9 +99,12 @@ header i {
 }
 
 .header-logo {
-  height: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  height: 100%;
 }
 .header-logo img {
   height: 40px;
@@ -134,16 +150,26 @@ header i {
 .home__information {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 32px;
   flex: 1;
 }
 .home div h2 {
   margin-bottom: 8px;
-  color: #9E976E;
+  font-size: 2rem;
   font-family: "Cinzel", serif;
+  color: #9E976E;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.home div p {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #fafafa;
+  font-weight: 300;
+  line-height: 1.5;
 }
 .home__separador {
   height: fit-content;
@@ -153,7 +179,6 @@ header i {
   padding: 16px 0;
 }
 .home__text--container {
-  padding: 16px;
   border-radius: 8px;
   height: fit-content;
   flex: 2;
@@ -165,7 +190,6 @@ header i {
   background-attachment: fixed;
 }
 .personajes .personaje__item {
-  padding: 16px;
   border-radius: 8px;
   height: 100%;
 }
@@ -238,6 +262,14 @@ header i {
   background-image: url("../img/multimedia/background.jpg");
   background-position: center;
 }
+.multimedia__soundtrack-container, .multimedia__videos-container {
+  border-radius: 8px;
+  width: 100%;
+}
+.multimedia__videos-container {
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
 .multimedia__videos-container iframe {
   width: 100%;
   height: 700px;
@@ -270,43 +302,35 @@ header i {
   top: 50%;
   transform: translateY(-50%);
 }
-.multimedia__videos-container, .multimedia__soundtrack-container {
-  padding: 16px;
-  border-radius: 8px;
-  font-size: 1.2em;
-}
 .multimedia h2 {
   margin-bottom: 8px;
   text-align: center;
-}
-.multimedia__videos-container {
-  margin: 0 auto;
-  margin-bottom: 24px;
-}
-.multimedia__soundtrack-container {
-  width: 100%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  color: #fafafa;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .contacto {
   background-image: url("../img/contacto/background.jpg");
 }
 .contacto form {
-  padding: 16px;
   border-radius: 16px;
   max-width: 720px;
   margin: auto;
 }
-.contacto h2 {
-  text-align: center;
-  color: #9E976E;
-  margin-bottom: 24px;
-  font-size: 2rem;
-  font-family: "Cinzel", serif;
+.contacto h1 {
+  margin: auto;
 }
 .contacto input {
   width: 100%;
   height: 48px;
   font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  color: #a9a9a9;
+  font-weight: 400;
+  line-height: 1.5;
   padding-left: 8px;
   margin: 8px 0;
 }
@@ -314,6 +338,11 @@ header i {
   background-color: #9E976E;
   border: none;
   cursor: pointer;
+  color: #fafafa;
+  transition: 0.3s ease-in-out background-color;
+}
+.contacto input[type=submit]:hover, .contacto input[type=reset]:hover {
+  background-color: #ccbf72;
 }
 
 /*# sourceMappingURL=styles.css.map */

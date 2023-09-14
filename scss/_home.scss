@@ -29,11 +29,7 @@
     }
 
     &__information {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        @include flexbox(row, center, center, wrap);
         gap: 32px;
         flex: 1;
     }
@@ -41,8 +37,10 @@
     div {
         h2 {
             margin-bottom: 8px;
-            color: $secondaryColor;
-            font-family: $secondaryFont;
+            @include textos($textXl, $secondaryFont, $secondaryColor, $fontBold);
+        }
+        p{
+            @include textos($textMd, $mainFont, $white1, $fontLight);
         }
     }
     &__separador {
@@ -56,7 +54,6 @@
     }
 
     &__text--container {
-        padding: 16px;
         border-radius: 8px;
         height: fit-content;
         flex: 2;

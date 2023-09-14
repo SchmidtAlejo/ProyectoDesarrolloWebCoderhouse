@@ -2,7 +2,6 @@ header {
   background-color: $mainColor !important;
 
   ul {
-    display: flex;
     align-items: center;
     height: 100%;
   }
@@ -12,11 +11,18 @@ header {
   }
 
   a {
-    font-family: $secondaryFont;
+    @include textos($textLg, $secondaryFont, $secondaryColor, $fontRegular);
     text-decoration: none;
-    color: $secondaryColor;
-    font-size: $textLg;
     margin: 0px 8px;
+    transition: .2s ease-in-out color;
+
+    &:hover{
+      color: $secondaryColorActive;
+    }
+  }
+
+  .active{
+    color: $secondaryColorActive;
   }
 
   i {
@@ -31,9 +37,8 @@ header {
 }
 
 .header-logo {
+  @include flexbox(row, center, center, nowrap);
   height: 100%;
-  display: flex;
-  align-items: center;
 
   img {
     height: 40px;
