@@ -1,34 +1,53 @@
 .contacto {
-    background-image: url('../img/contacto/background.jpg');
+  background-image: url("../img/contacto/background.webp");
 
-    form {
-        border-radius: 16px;
-        max-width: 720px;
-        margin: auto;
+  form {
+    border-radius: 16px;
+    margin: auto;
+
+    .contacto__inputs-container {
+      @include flexbox(row, stretch, flex-start, wrap);
+      gap: 16px;
+      @media screen and (max-width: 992px) {
+        flex-direction: column;
+        gap: 0;
+      }
+      & div {
+        flex: 1;
+      }
     }
 
     h1 {
-        margin: auto;
+      margin: auto;
+    }
+
+    textarea {
+      margin: 8px 0;
+      min-height: 200px;
+      width: 100%;
+      padding: 8px;
+      @include textos($textLg, $mainFont, $mainColor, $fontRegular);
     }
 
     input {
-        width: 100%;
-        height: 48px;
-        @include textos($textLg, $mainFont, $gray1, $fontRegular);
-        padding-left: 8px;
-        margin: 8px 0;
+      width: 100%;
+      height: 48px;
+      @include textos($textLg, $mainFont, $mainColor, $fontRegular);
+      padding-left: 8px;
+      margin: 8px 0;
 
-        &[type="submit"],
-        &[type="reset"] {
-            background-color: $secondaryColor;
-            border: none;
-            cursor: pointer;
-            color: $white1;
-            transition: .3s ease-in-out background-color;
+      &[type="submit"],
+      &[type="reset"] {
+        background-color: $secondaryColor;
+        border: none;
+        cursor: pointer;
+        color: $white1;
+        transition: 0.3s ease-in-out background-color;
 
-            &:hover{
-                background-color: $secondaryColorActive;
-            }
+        &:hover {
+          background-color: $secondaryColorActive;
         }
+      }
     }
+  }
 }

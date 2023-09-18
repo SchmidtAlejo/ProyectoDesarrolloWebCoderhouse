@@ -133,18 +133,53 @@ header i {
   min-height: calc(100vh - 56px);
   gap: 32px;
 }
+.home section .container h1 {
+  font-size: 4rem;
+  font-family: "Cinzel", serif;
+  color: #9E976E;
+  font-weight: bold;
+  line-height: 1.5;
+  width: fit-content;
+  border-radius: 16px;
+}
+@media screen and (max-width: 578px) {
+  .home section .container h1 {
+    font-size: 2.5rem;
+  }
+}
+.home section .container h2 {
+  margin-bottom: 8px;
+  font-size: 2rem;
+  font-family: "Cinzel", serif;
+  color: #9E976E;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.home section .container p {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #fafafa;
+  font-weight: 300;
+  line-height: 1.5;
+}
+@media screen and (max-width: 578px) {
+  .home section .container p {
+    font-size: 0.8rem;
+  }
+}
 .home section:first-child {
-  background-image: url("../img/index/background-1.jpg");
+  background-image: url("../img/index/background-1.webp");
   background-size: contain;
   background-color: #000;
 }
 .home section:nth-child(2) {
-  background-image: url("../img//index/background-2.jpg");
+  background-image: url("../img//index/background-2.webp");
   background-attachment: fixed;
+  background-size: cover;
   min-height: 100vh;
 }
 .home section:last-child {
-  background-image: url("../img/index/background-3.jpg");
+  background-image: url("../img/index/background-3.webp");
   background-size: cover;
 }
 .home__information {
@@ -155,21 +190,6 @@ header i {
   flex-wrap: wrap;
   gap: 32px;
   flex: 1;
-}
-.home div h2 {
-  margin-bottom: 8px;
-  font-size: 2rem;
-  font-family: "Cinzel", serif;
-  color: #9E976E;
-  font-weight: bold;
-  line-height: 1.5;
-}
-.home div p {
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  color: #fafafa;
-  font-weight: 300;
-  line-height: 1.5;
 }
 .home__separador {
   height: fit-content;
@@ -186,7 +206,7 @@ header i {
 }
 
 .personajes {
-  background-image: url("../img/personajes/background.jpg");
+  background-image: url("../img/personajes/background.webp");
   background-attachment: fixed;
 }
 .personajes .personaje__item {
@@ -199,67 +219,102 @@ header i {
   height: 128px;
   border-radius: 8px;
 }
-.personajes .personaje__item h2 {
+.personajes .personaje__item h4 {
   text-align: center;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  color: #fafafa;
+  font-weight: 400;
+  line-height: 1.5;
 }
 .personajes .personaje__item p {
   margin-top: 4px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #fafafa;
+  font-weight: 300;
+  line-height: 1.5;
+}
+@media screen and (max-width: 578px) {
+  .personajes .personaje__item p {
+    font-size: 0.8rem;
+  }
 }
 
 .clases {
-  background-image: url("../img/clases/background.jpg");
+  background-image: url("../img/clases/background.webp");
   background-position: center;
   text-align: center;
 }
 .clases .clase__item {
-  max-width: 720px;
   padding: 16px;
   border-radius: 8px;
   margin: 0 32px;
 }
-.clases .clase__item img {
+.clases .clase__item h4 {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  color: #fafafa;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.clases .clase__item__descripcion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.clases .clase__item__descripcion img {
   object-fit: cover;
-  margin: auto;
 }
 @media screen and (min-width: 578px) {
-  .clases .clase__item img {
+  .clases .clase__item__descripcion img {
     width: 360px;
     height: 530px;
   }
 }
 @media screen and (max-width: 578px) {
-  .clases .clase__item img {
+  .clases .clase__item__descripcion img {
     width: 240px;
     height: 350px;
   }
 }
 @media screen and (max-width: 400px) {
-  .clases .clase__item img {
+  .clases .clase__item__descripcion img {
     width: 200px;
     height: 350px;
   }
 }
-.clases .clase__item p {
+.clases .clase__item__descripcion p {
   text-align: left;
+  width: 500px;
+  min-height: 200px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #fafafa;
+  font-weight: 300;
+  line-height: 1.5;
 }
-@media screen and (min-width: 578px) {
-  .clases .clase__item p {
-    min-height: 120px;
+@media screen and (max-width: 1200px) {
+  .clases .clase__item__descripcion p {
+    width: 300px;
   }
 }
-@media screen and (max-width: 578px) {
-  .clases .clase__item p {
-    min-height: 180px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .clases .clase__item p {
-    min-height: 220px;
+@media screen and (min-width: 972px) {
+  .clases .clase__item__descripcion p {
+    font-size: 1.2rem;
   }
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  width: fit-content;
+}
+
 .multimedia {
-  background-image: url("../img/multimedia/background.jpg");
+  background-image: url("../img/multimedia/background.webp");
   background-position: center;
 }
 .multimedia__soundtrack-container, .multimedia__videos-container {
@@ -313,35 +368,62 @@ header i {
 }
 
 .contacto {
-  background-image: url("../img/contacto/background.jpg");
+  background-image: url("../img/contacto/background.webp");
 }
 .contacto form {
   border-radius: 16px;
-  max-width: 720px;
   margin: auto;
 }
-.contacto h1 {
+.contacto form .contacto__inputs-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+@media screen and (max-width: 992px) {
+  .contacto form .contacto__inputs-container {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.contacto form .contacto__inputs-container div {
+  flex: 1;
+}
+.contacto form h1 {
   margin: auto;
 }
-.contacto input {
+.contacto form textarea {
+  margin: 8px 0;
+  min-height: 200px;
+  width: 100%;
+  padding: 8px;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.contacto form input {
   width: 100%;
   height: 48px;
   font-size: 1.2rem;
   font-family: "Roboto", sans-serif;
-  color: #a9a9a9;
+  color: #000;
   font-weight: 400;
   line-height: 1.5;
   padding-left: 8px;
   margin: 8px 0;
 }
-.contacto input[type=submit], .contacto input[type=reset] {
+.contacto form input[type=submit], .contacto form input[type=reset] {
   background-color: #9E976E;
   border: none;
   cursor: pointer;
   color: #fafafa;
   transition: 0.3s ease-in-out background-color;
 }
-.contacto input[type=submit]:hover, .contacto input[type=reset]:hover {
+.contacto form input[type=submit]:hover, .contacto form input[type=reset]:hover {
   background-color: #ccbf72;
 }
 

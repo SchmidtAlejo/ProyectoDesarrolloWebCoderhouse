@@ -1,63 +1,74 @@
 .home {
-    width: 100%;
-    
-    section {
-        background-position: center;
-        background-repeat: no-repeat;
+  width: 100%;
 
-        .container {
-            min-height: calc(100vh - 56px);
-            gap: 32px;
-        }
+  section {
+    background-position: center;
+    background-repeat: no-repeat;
 
-        &:first-child {
-            background-image: url('../img/index/background-1.jpg');
-            background-size: contain;
-            background-color: $mainColor;
-        }
+    .container {
+      min-height: calc(100vh - 56px);
+      gap: 32px;
 
-        &:nth-child(2) {
-            background-image: url('../img//index/background-2.jpg');
-            background-attachment: fixed;
-            min-height: 100vh;
+      h1 {
+        @include textos($textXxxl, $secondaryFont, $secondaryColor, $fontBold);
+        width: fit-content;
+        border-radius: 16px;
+
+        @media screen and (max-width: 578px) {
+            font-size: $textXxl;
         }
-        
-        &:last-child {
-            background-image: url('../img/index/background-3.jpg');
-            background-size: cover;
+      }
+
+      h2 {
+        margin-bottom: 8px;
+        @include textos($textXl, $secondaryFont, $secondaryColor, $fontBold);
+      }
+      p {
+        @include textos($textMd, $mainFont, $white1, $fontLight);
+
+        @media screen and (max-width: 578px) {
+            font-size: $textSm;
         }
+      }
     }
 
-    &__information {
-        @include flexbox(row, center, center, wrap);
-        gap: 32px;
-        flex: 1;
+    &:first-child {
+      background-image: url("../img/index/background-1.webp");
+      background-size: contain;
+      background-color: $mainColor;
     }
 
-    div {
-        h2 {
-            margin-bottom: 8px;
-            @include textos($textXl, $secondaryFont, $secondaryColor, $fontBold);
-        }
-        p{
-            @include textos($textMd, $mainFont, $white1, $fontLight);
-        }
-    }
-    &__separador {
-        height: fit-content;
-
-        img {
-            width: 100%;
-            padding: 16px 0;
-        }
-        
+    &:nth-child(2) {
+      background-image: url("../img//index/background-2.webp");
+      background-attachment: fixed;
+      background-size: cover;
+      min-height: 100vh;
     }
 
-    &__text--container {
-        border-radius: 8px;
-        height: fit-content;
-        flex: 2;
-        min-width: 350px;
+    &:last-child {
+      background-image: url("../img/index/background-3.webp");
+      background-size: cover;
     }
+  }
+
+  &__information {
+    @include flexbox(row, center, center, wrap);
+    gap: 32px;
+    flex: 1;
+  }
+  &__separador {
+    height: fit-content;
+
+    img {
+      width: 100%;
+      padding: 16px 0;
+    }
+  }
+
+  &__text--container {
+    border-radius: 8px;
+    height: fit-content;
+    flex: 2;
+    min-width: 350px;
+  }
 }
-

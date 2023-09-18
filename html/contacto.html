@@ -3,9 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elden Ring</title>
+    <title>Elden Ring | Contacto</title>
     <!-- Icono -->
-    <link rel="icon" href="../img/icono.jpeg" type="image/png" />
+    <link rel="icon" href="../img/icono.ico" type="image/png" />
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Contacta con el Autor de este sitio web"
+    />
+    <meta name="keywords" content="Elden Ring, mensaje, contacto, enviar">
+    <meta name="author" content="Alejo Schmidt">
+    <meta name="copyright" content="Creado por Alejo Schmidt (2023) ©">
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
@@ -33,7 +41,7 @@
     <header class="navbar navbar-expand-lg">
       <nav class="container">
         <a class="header-logo" href="../index.html">
-          <img src="../img/elden-ring-logo.png" alt="Logo del elden ring" />
+          <img src="../img/elden-ring-logo.webp" alt="Logo del elden ring" />
         </a>
         <button
           class="navbar-toggler"
@@ -74,14 +82,21 @@
       <div class="container">
         <form class="background-opacity-black">
           <h1 class="title">Contacto</h1>
-          <input type="text" id="nombre" placeholder="Nombre*" />
-          <input type="text" id="email" placeholder="Correo electrónico*" />
-          <input
-            type="text"
-            id="nroTelefono"
-            placeholder="Número de telefono"
-          />
-          <input type="text" id="mensaje" placeholder="Coloque su mensaje*" />
+          <div class="contacto__inputs-container">
+            <div>
+              <input type="text" id="nombre" placeholder="Nombre*" />
+              <input type="text" id="apellido" placeholder="Apellido*" />
+            </div>
+            <div>
+              <input type="text" id="email" placeholder="Correo electrónico*" />
+              <input
+                type="text"
+                id="nroTelefono"
+                placeholder="Número de telefono"
+              />
+            </div>
+          </div>
+          <textarea id="mensaje" placeholder="Coloque su mensaje*"></textarea>
           <input type="submit" />
           <input type="reset" />
         </form>
