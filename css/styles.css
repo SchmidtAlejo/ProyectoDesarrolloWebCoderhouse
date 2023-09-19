@@ -39,11 +39,13 @@ footer p {
 main {
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: calc(100vh - 136px);
+  min-height: calc(100vh - 80px);
+  padding-top: 56px;
 }
 @media screen and (max-width: 992px) {
   main {
-    min-height: calc(100vh - 126px);
+    min-height: calc(100vh - 80px);
+    padding-top: 46px;
   }
 }
 
@@ -52,19 +54,43 @@ main {
   padding: 16px;
 }
 
-.title {
+h1 {
   font-size: 2.5rem;
   font-family: "Cinzel", serif;
   color: #9E976E;
   font-weight: bold;
   line-height: 1.5;
   width: fit-content;
-  padding: 8px;
   border-radius: 8px;
+}
+
+h4 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  color: #fafafa;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #fafafa;
+  font-weight: 300;
+  line-height: 1.5;
+}
+@media screen and (max-width: 578px) {
+  p {
+    font-size: 0.8rem;
+  }
 }
 
 header {
   background-color: #000 !important;
+  position: fixed !important;
+  width: 100%;
+  z-index: 100;
 }
 header ul {
   align-items: center;
@@ -130,8 +156,8 @@ header i {
   background-repeat: no-repeat;
 }
 .home section .container {
-  min-height: calc(100vh - 56px);
   gap: 32px;
+  min-height: calc(100vh - 56px);
 }
 .home section .container h1 {
   font-size: 4rem;
@@ -148,23 +174,15 @@ header i {
   }
 }
 .home section .container h2 {
-  margin-bottom: 8px;
   font-size: 2rem;
   font-family: "Cinzel", serif;
   color: #9E976E;
   font-weight: bold;
   line-height: 1.5;
 }
-.home section .container p {
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  color: #fafafa;
-  font-weight: 300;
-  line-height: 1.5;
-}
-@media screen and (max-width: 578px) {
-  .home section .container p {
-    font-size: 0.8rem;
+@media screen and (max-width: 768px) {
+  .home section .container {
+    min-height: calc(100vh - 46px);
   }
 }
 .home section:first-child {
@@ -176,11 +194,18 @@ header i {
   background-image: url("../img//index/background-2.webp");
   background-attachment: fixed;
   background-size: cover;
-  min-height: 100vh;
 }
 .home section:last-child {
   background-image: url("../img/index/background-3.webp");
   background-size: cover;
+}
+.home section:last-child .container {
+  min-height: calc(100vh - 136px);
+}
+@media screen and (max-width: 768px) {
+  .home section:last-child .container {
+    min-height: calc(100vh - 126px);
+  }
 }
 .home__information {
   display: flex;
@@ -219,44 +244,18 @@ header i {
   height: 128px;
   border-radius: 8px;
 }
-.personajes .personaje__item h4 {
-  text-align: center;
-  font-size: 2rem;
-  font-family: "Roboto", sans-serif;
-  color: #fafafa;
-  font-weight: 400;
-  line-height: 1.5;
-}
 .personajes .personaje__item p {
   margin-top: 4px;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  color: #fafafa;
-  font-weight: 300;
-  line-height: 1.5;
-}
-@media screen and (max-width: 578px) {
-  .personajes .personaje__item p {
-    font-size: 0.8rem;
-  }
 }
 
 .clases {
   background-image: url("../img/clases/background.webp");
   background-position: center;
-  text-align: center;
 }
 .clases .clase__item {
   padding: 16px;
   border-radius: 8px;
   margin: 0 32px;
-}
-.clases .clase__item h4 {
-  font-size: 2rem;
-  font-family: "Roboto", sans-serif;
-  color: #fafafa;
-  font-weight: 400;
-  line-height: 1.5;
 }
 .clases .clase__item__descripcion {
   display: flex;
@@ -288,14 +287,8 @@ header i {
   }
 }
 .clases .clase__item__descripcion p {
-  text-align: left;
   width: 500px;
   min-height: 200px;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  color: #fafafa;
-  font-weight: 300;
-  line-height: 1.5;
 }
 @media screen and (max-width: 1200px) {
   .clases .clase__item__descripcion p {
@@ -307,9 +300,13 @@ header i {
     font-size: 1.2rem;
   }
 }
-
-.carousel-control-prev,
-.carousel-control-next {
+@media screen and (max-width: 578px) {
+  .clases .clase__item__descripcion p {
+    min-height: 150px;
+  }
+}
+.clases .carousel-control-prev,
+.clases .carousel-control-next {
   width: fit-content;
 }
 
@@ -358,7 +355,6 @@ header i {
   transform: translateY(-50%);
 }
 .multimedia h2 {
-  margin-bottom: 8px;
   text-align: center;
   font-size: 2rem;
   font-family: "Roboto", sans-serif;

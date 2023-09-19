@@ -13,18 +13,8 @@
             border-radius: 8px;
         }
 
-        h4 {
-            text-align: center;
-            @include textos($textXl, $mainFont, $white1, $fontRegular);
-        }
-
         p {
             margin-top: 4px;
-            @include textos($textMd, $mainFont, $white1, $fontLight);
-
-            @media screen and (max-width: 578px) {
-                font-size: $textSm;
-            }
         }
     }
 }

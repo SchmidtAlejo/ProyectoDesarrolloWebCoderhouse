@@ -6,7 +6,6 @@
     background-repeat: no-repeat;
 
     .container {
-      min-height: calc(100vh - 56px);
       gap: 32px;
 
       h1 {
@@ -15,20 +14,18 @@
         border-radius: 16px;
 
         @media screen and (max-width: 578px) {
-            font-size: $textXxl;
+          font-size: $textXxl;
         }
       }
 
       h2 {
-        margin-bottom: 8px;
         @include textos($textXl, $secondaryFont, $secondaryColor, $fontBold);
       }
-      p {
-        @include textos($textMd, $mainFont, $white1, $fontLight);
 
-        @media screen and (max-width: 578px) {
-            font-size: $textSm;
-        }
+      min-height: calc(100vh - 56px);
+
+      @media screen and (max-width: 768px) {
+        min-height: calc(100vh - 46px);
       }
     }
 
@@ -42,12 +39,19 @@
       background-image: url("../img//index/background-2.webp");
       background-attachment: fixed;
       background-size: cover;
-      min-height: 100vh;
     }
 
     &:last-child {
       background-image: url("../img/index/background-3.webp");
       background-size: cover;
+
+      .container {
+        min-height: calc(100vh - 136px);
+
+        @media screen and (max-width: 768px) {
+          min-height: calc(100vh - 126px);
+        }
+      }
     }
   }
 

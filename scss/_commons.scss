@@ -34,10 +34,12 @@ footer {
 main {
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: calc(100vh - 136px);
+  min-height: calc(100vh - 80px);
+  padding-top: 56px;
 
   @media screen and (max-width: 992px) {
-    min-height: calc(100vh - 126px);
+    min-height: calc(100vh - 80px);
+    padding-top: 46px;
   }
 }
 
@@ -46,9 +48,21 @@ main {
   padding: 16px;
 }
 
-.title {
+h1 {
   @include textos($textXxl, $secondaryFont, $secondaryColor, $fontBold);
   width: fit-content;
-  padding: 8px;
   border-radius: 8px;
+}
+
+h4 {
+  text-align: center;
+  @include textos($textXl, $mainFont, $white1, $fontRegular);
+}
+
+p{
+  @include textos($textMd, $mainFont, $white1, $fontLight);
+
+  @media screen and (max-width: 578px) {
+    font-size: $textSm;
+  }
 }

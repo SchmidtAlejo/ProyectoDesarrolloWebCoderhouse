@@ -1,16 +1,11 @@
 .clases {
   background-image: url("../img/clases/background.webp");
   background-position: center;
-  text-align: center;
 
   .clase__item {
     padding: 16px;
     border-radius: 8px;
     margin: 0 32px;
-
-    h4 {
-      @include textos($textXl, $mainFont, $white1, $fontRegular);
-    }
 
     &__descripcion {
       @include flexbox(row, center, space-evenly, wrap);
@@ -33,22 +28,25 @@
       }
 
       p {
-        text-align: left;
         width: 500px;
         min-height: 200px;
-        @include textos($textMd, $mainFont, $white1, $fontLight);
         @media screen and (max-width: 1200px) {
           width: 300px;
         }
         @media screen and (min-width: 972px) {
           font-size: $textLg;
         }
+
+        @media screen and (max-width: 578px) {
+          min-height: 150px;
+        }
       }
     }
   }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: fit-content;
+  }
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  width: fit-content;
-}
