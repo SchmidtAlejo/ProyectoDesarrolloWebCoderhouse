@@ -27,19 +27,24 @@
       width: 100%;
       padding: 8px;
       @include textos($textLg, $mainFont, $mainColor, $fontRegular);
+      background-color: $mainColor2;
+      border-radius: 8px;
+      border: none;
     }
 
     input {
       width: 100%;
       height: 48px;
-      @include textos($textLg, $mainFont, $mainColor, $fontRegular);
+      @include textos($textLg, $mainFont, $white1, $fontRegular);
       padding-left: 8px;
       margin: 8px 0;
+      background-color: $mainColor2;
+      border-radius: 8px;
+      border: none;
 
       &[type="submit"],
       &[type="reset"] {
         background-color: $secondaryColor;
-        border: none;
         cursor: pointer;
         color: $white1;
         transition: 0.3s ease-in-out background-color;
