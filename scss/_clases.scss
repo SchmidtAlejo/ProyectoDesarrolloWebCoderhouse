@@ -2,6 +2,10 @@
   background-image: url("../img/clases/background.webp");
   background-position: center;
 
+  h4 {
+    text-align: center;
+  }
+  
   .clase__item {
     padding: 16px;
     border-radius: 8px;
@@ -43,10 +47,9 @@
       }
     }
   }
-  
+
   .carousel-control-prev,
   .carousel-control-next {
     width: fit-content;
   }
 }
-
