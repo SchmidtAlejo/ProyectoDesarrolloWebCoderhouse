@@ -26,7 +26,7 @@
       min-height: 200px;
       width: 100%;
       padding: 8px;
-      @include textos($textLg, $mainFont, $mainColor, $fontRegular);
+      @include textos($textLg, $mainFont, $white1, $fontRegular);
       background-color: $mainColor2;
       border-radius: 8px;
       border: none;
