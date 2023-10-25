@@ -38,6 +38,7 @@
     &:nth-child(2) {
       background-image: url("../img//index/background-2.webp");
       background-size: cover;
+      background-attachment: fixed;
     }
 
     &:last-child {

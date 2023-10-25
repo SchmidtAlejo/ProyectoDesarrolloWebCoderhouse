@@ -7,6 +7,7 @@
 
 body {
   min-height: 100vh;
+  background-color: #000;
 }
 body::-webkit-scrollbar {
   width: 8px;
@@ -187,6 +188,7 @@ header i {
 .home section:nth-child(2) {
   background-image: url("../img//index/background-2.webp");
   background-size: cover;
+  background-attachment: fixed;
 }
 .home section:last-child {
   background-image: url("../img/index/background-3.webp");
@@ -227,7 +229,6 @@ header i {
   background-image: url("../img/personajes/background.webp");
   background-attachment: fixed;
   background-position: center;
-  background-color: #000;
 }
 .personajes .personaje__item {
   border-radius: 8px;
