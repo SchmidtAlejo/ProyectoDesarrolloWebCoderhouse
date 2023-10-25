@@ -225,6 +225,8 @@ header i {
 
 .personajes {
   background-image: url("../img/personajes/background.webp");
+  background-attachment: fixed;
+  background-position: center;
 }
 .personajes .personaje__item {
   border-radius: 8px;

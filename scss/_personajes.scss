@@ -1,5 +1,7 @@
 .personajes {
     background-image: url('../img/personajes/background.webp');
+    background-attachment: fixed;
+    background-position: center;
 
     .personaje__item {
         border-radius: 8px;
