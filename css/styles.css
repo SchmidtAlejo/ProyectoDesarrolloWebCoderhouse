@@ -186,7 +186,6 @@ header i {
 }
 .home section:nth-child(2) {
   background-image: url("../img//index/background-2.webp");
-  background-attachment: fixed;
   background-size: cover;
 }
 .home section:last-child {
@@ -226,7 +225,6 @@ header i {
 
 .personajes {
   background-image: url("../img/personajes/background.webp");
-  background-attachment: fixed;
 }
 .personajes .personaje__item {
   border-radius: 8px;
