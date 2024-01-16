@@ -22,10 +22,10 @@
         @include textos($textXl, $secondaryFont, $secondaryColor, $fontBold);
       }
 
-      min-height: calc(100vh - 56px);
+      min-height: calc(100dvh - 56px);
 
       @media screen and (max-width: 768px) {
-        min-height: calc(100vh - 46px);
+        min-height: calc(100dvh - 46px);
       }
     }
 
@@ -46,10 +46,10 @@
       background-size: cover;
 
       .container {
-        min-height: calc(100vh - 136px);
+        min-height: calc(100dvh - 136px);
 
         @media screen and (max-width: 768px) {
-          min-height: calc(100vh - 126px);
+          min-height: calc(100dvh - 126px);
         }
       }
     }

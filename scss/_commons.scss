@@ -6,7 +6,7 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: $mainColor;
 
   &::-webkit-scrollbar {
@@ -35,11 +35,11 @@ footer {
 main {
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100dvh - 80px);
   padding-top: 56px;
 
   @media screen and (max-width: 992px) {
-    min-height: calc(100vh - 80px);
+    min-height: calc(100dvh - 80px);
     padding-top: 46px;
   }
 }
